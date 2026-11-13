@@ -1,0 +1,47 @@
+{
+  "fintrack-ai-01": {
+    "src": "/projects/fintrack-ai-01.webp",
+    "width": 1406,
+    "height": 715
+  },
+  "fintrack-ai-02": {
+    "src": "/projects/fintrack-ai-02.webp",
+    "width": 1406,
+    "height": 715
+  },
+  "syntaxwear-01": {
+    "src": "/projects/syntaxwear-01.webp",
+    "width": 1406,
+    "height": 540
+  },
+  "syntaxwear-02": {
+    "src": "/projects/syntaxwear-02.webp",
+    "width": 1406,
+    "height": 715
+  },
+  "anny-beatriz-01": {
+    "src": "/projects/anny-beatriz-01.webp",
+    "width": 1406,
+    "height": 715
+  },
+  "botflix-01": {
+    "src": "/projects/botflix-01.webp",
+    "width": 1406,
+    "height": 715
+  },
+  "aura-studio-01": {
+    "src": "/projects/aura-studio-01.webp",
+    "width": 1406,
+    "height": 715
+  },
+  "wm-fit-01": {
+    "src": "/projects/wm-fit-01.webp",
+    "width": 1406,
+    "height": 633
+  },
+  "atelier-tempo-01": {
+    "src": "/projects/atelier-tempo-01.webp",
+    "width": 1406,
+    "height": 633
+  }
+}
