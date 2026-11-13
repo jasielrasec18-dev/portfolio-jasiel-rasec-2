@@ -71,13 +71,14 @@
 
   .display {
     font-family: var(--font-display);
-    font-stretch: 78%;
-    letter-spacing: -0.035em;
+    font-stretch: 88%;
+    letter-spacing: -0.022em;
   }
 
+  /* Segunda linha do nome em baixo contraste. (text-stroke foi evitado: em fontes
+     variáveis ele expõe os contornos sobrepostos dos glifos.) */
   .outline-type {
-    color: transparent;
-    -webkit-text-stroke: 1px color-mix(in oklab, var(--color-paper) 38%, transparent);
+    color: color-mix(in oklab, var(--color-paper) 16%, var(--color-ink));
   }
 
   .hairline {

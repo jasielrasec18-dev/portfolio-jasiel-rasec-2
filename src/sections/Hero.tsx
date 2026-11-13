@@ -60,7 +60,7 @@ export function Hero({ ready }: HeroProps) {
         <div className="grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-6">
           <h1
             id="hero-title"
-            className="display -ml-[0.04em] text-[clamp(4.5rem,21vw,9rem)] leading-[0.82] font-bold tracking-[-0.045em] text-paper uppercase lg:col-span-7 lg:text-[clamp(8rem,12.5vw,14rem)]"
+            className="display -ml-[0.03em] text-[clamp(5.5rem,40vw,12rem)] leading-[0.84] font-bold tracking-[0.005em] text-paper uppercase [font-stretch:75%] lg:col-span-7 lg:text-[clamp(10rem,17vw,22rem)]"
             aria-label="Jasiel Rasec"
           >
             <span className="block overflow-hidden pb-[0.06em]" aria-hidden="true">
