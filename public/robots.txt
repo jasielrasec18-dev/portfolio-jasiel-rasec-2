@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jasielrasec18-dev-portfolio-jasiel-mu.vercel.app/sitemap.xml
