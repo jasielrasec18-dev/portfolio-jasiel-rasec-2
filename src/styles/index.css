@@ -258,6 +258,35 @@
   }
 }
 
+/* Hero: grade quadriculada de 80px, texto vazado e brilho violeta */
+.hero-grid {
+  background-image:
+    linear-gradient(color-mix(in oklab, white 6%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in oklab, white 6%, transparent) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+.hero-glow {
+  background: radial-gradient(
+    closest-side,
+    color-mix(in oklab, var(--color-violet) 22%, transparent),
+    transparent
+  );
+}
+.hero-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px color-mix(in oklab, var(--color-paper) 55%, transparent);
+}
+.blink-dot {
+  animation: blink 1.1s steps(1) infinite;
+}
+.meta-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-steel);
+}
+
 /* Cursor de terminal */
 .caret::after {
   content: '';

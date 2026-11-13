@@ -1,9 +1,44 @@
 import { motion, useReducedMotion } from 'motion/react'
+import { ArrowDown } from 'lucide-react'
+import type { ReactNode } from 'react'
 import { ActionLink } from '../components/ActionLink'
-import { ArchGraphic } from '../components/ArchGraphic'
 import { profile } from '../data/profile'
 
 const EASE = [0.16, 1, 0.3, 1] as const
+
+/** Ícones de marca (removidos do lucide-react), traçado no mesmo estilo. */
+function BrandIcon({ children }: { children: ReactNode }) {
+  return (
+    <svg
+      aria-hidden="true"
+      width={14}
+      height={14}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      {children}
+    </svg>
+  )
+}
+
+const Github = () => (
+  <BrandIcon>
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
+  </BrandIcon>
+)
+
+const Linkedin = () => (
+  <BrandIcon>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
+  </BrandIcon>
+)
 
 interface HeroProps {
   /** Dispara as animações apenas depois da abertura, para não competirem. */
@@ -30,120 +65,124 @@ export function Hero({ ready }: HeroProps) {
     <section
       id="inicio"
       aria-labelledby="hero-title"
-      className="halo tech-grid relative flex min-h-svh flex-col overflow-hidden pt-24 lg:pt-24"
+      className="hero-grid relative flex min-h-svh flex-col overflow-hidden pt-16"
     >
-      {/* Marcadores editoriais nas bordas */}
-      <motion.div
-        {...fade(0.9)}
-        className="pointer-events-none absolute right-5 bottom-10 hidden lg:right-8 lg:block"
-      >
-        <span className="vertical meta">{profile.coordinates}</span>
-      </motion.div>
+      {/* Brilho violeta no canto direito */}
+      <div
+        aria-hidden="true"
+        className="hero-glow pointer-events-none absolute top-10 -right-40 h-[640px] w-[640px]"
+      />
 
-      <div className="shell flex flex-1 flex-col justify-between gap-8 pb-8 lg:gap-6 lg:pb-8">
-        {/* Linha superior: função + disponibilidade */}
+      <div className="relative mx-auto flex w-full max-w-[1600px] flex-1 flex-col justify-between px-5 pt-10 pb-8 md:px-10">
+        {/* Linha superior: coordenadas · edição · disponibilidade */}
         <motion.div
-          {...fade(0.5)}
-          className="grid gap-3 border-t border-line pt-4 sm:grid-cols-2 lg:grid-cols-12"
+          {...fade(0.4)}
+          className="meta-label flex flex-wrap items-start justify-between gap-4"
         >
-          <p className="label lg:col-span-3">{profile.roleEn}</p>
-          <p className="meta flex items-center gap-3 lg:col-span-5">
-            <span className="pulse-dot relative inline-block size-1.5 rounded-full bg-cyan" />
-            {profile.availability}
-          </p>
-          <p className="meta hidden lg:col-span-4 lg:block lg:text-right">
-            {profile.city}, {profile.state} — {profile.country}
-          </p>
+          <span>[ 08°56′S · 40°30′W ]</span>
+          <span className="hidden md:inline">Portfolio — Ed. 2026</span>
+          <span className="flex items-center gap-2">
+            <span className="blink-dot size-2 rounded-full bg-cyan" />
+            Disponível para projetos
+          </span>
         </motion.div>
 
-        {/* Nome oversized + gráfico alinhado à direita */}
-        <div className="grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-6">
+        {/* Nome oversized */}
+        <div className="my-10">
+          <motion.p {...fade(0.3)} className="meta-label mb-6 text-cyan">
+            {'// Full Stack Developer'}
+          </motion.p>
           <h1
             id="hero-title"
-            className="display -ml-[0.03em] text-[clamp(5.5rem,40vw,12rem)] leading-[0.84] font-bold tracking-[0.005em] text-paper uppercase [font-stretch:75%] lg:col-span-7 lg:text-[clamp(10rem,17vw,22rem)]"
             aria-label="Jasiel Rasec"
+            className="font-display leading-[0.82] font-extrabold tracking-[-0.04em] text-paper uppercase"
           >
-            <span className="block overflow-hidden pb-[0.06em]" aria-hidden="true">
-              <motion.span className="block" {...lineAnim(0.15)}>
+            <span className="block overflow-hidden" aria-hidden="true">
+              <motion.span
+                className="block text-[19vw] md:text-[15vw]"
+                {...lineAnim(0.15)}
+              >
                 Jasiel
               </motion.span>
             </span>
-            <span className="block overflow-hidden pb-[0.06em]" aria-hidden="true">
-              <motion.span className="outline-type block" {...lineAnim(0.28)}>
-                Rasec
+            <span className="block overflow-hidden" aria-hidden="true">
+              <motion.span
+                className="hero-outline block text-[19vw] md:pl-[12vw] md:text-[15vw]"
+                {...lineAnim(0.28)}
+              >
+                Rasec<span className="text-cyan [-webkit-text-stroke:0]">.</span>
               </motion.span>
             </span>
           </h1>
-
-          <motion.div
-            {...fade(0.7)}
-            className="relative hidden text-steel lg:col-span-5 lg:block"
-          >
-            <span className="label absolute -top-6 left-0">fig. 01 — fluxo de uma requisição</span>
-            {show && <ArchGraphic className="h-auto w-full" />}
-          </motion.div>
         </div>
 
-        {/* Bloco inferior: tagline, texto e ações */}
-        <div className="grid gap-10 border-t border-line pt-8 lg:grid-cols-12 lg:gap-6">
-          <div className="lg:col-span-7">
-            <motion.p
-              {...fade(0.55)}
-              className="display max-w-[16ch] text-[clamp(1.75rem,3.4vw,2.9rem)] leading-[1.02] font-semibold text-balance text-paper"
-            >
+        {/* Bloco inferior */}
+        <div className="grid gap-10 md:grid-cols-12 md:items-end">
+          <motion.div {...fade(0.55)} className="md:col-span-6 lg:col-span-5">
+            <h2 className="font-display text-2xl leading-tight font-semibold md:text-3xl">
               Transformando ideias em experiências digitais.
-            </motion.p>
-            <motion.p {...fade(0.65)} className="mt-5 max-w-[52ch] text-[1.05rem] leading-relaxed text-mist">
+            </h2>
+            <p className="mt-4 max-w-md text-mist">
               Desenvolvo aplicações web modernas, interfaces intuitivas e soluções completas,
               conectando design, tecnologia e funcionalidade do frontend ao backend.
-            </motion.p>
-          </div>
-          <div className="flex flex-col justify-end gap-6 lg:col-span-5">
-            <motion.div {...fade(0.75)} className="flex flex-wrap items-center gap-3">
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
               <ActionLink href="#projetos" icon="down">
                 Explorar projetos
               </ActionLink>
               <ActionLink href="#contato" variant="ghost">
                 Entrar em contato
               </ActionLink>
-            </motion.div>
-            <motion.div {...fade(0.85)} className="flex flex-wrap gap-x-6 gap-y-2">
-              <a
-                href={profile.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="meta underline decoration-line underline-offset-4 transition-colors hover:text-paper hover:decoration-cyan"
-              >
-                github ↗<span className="sr-only"> (abre em nova aba)</span>
-              </a>
-              <a
-                href={profile.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="meta underline decoration-line underline-offset-4 transition-colors hover:text-paper hover:decoration-cyan"
-              >
-                linkedin ↗<span className="sr-only"> (abre em nova aba)</span>
-              </a>
-            </motion.div>
-          </div>
-        </div>
+            </div>
+          </motion.div>
 
-        {/* Indicador de scroll */}
-        <motion.a
-          {...fade(1)}
-          href="#sobre"
-          className="group flex items-center gap-3 self-start"
-          aria-label="Rolar para a seção Sobre"
-        >
-          <span className="relative h-10 w-px overflow-hidden bg-line">
-            <motion.span
-              className="absolute inset-x-0 top-0 h-1/2 bg-cyan"
-              animate={reduce ? undefined : { y: ['-100%', '200%'] }}
-              transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
-            />
-          </span>
-          <span className="label transition-colors group-hover:text-paper">scroll</span>
-        </motion.a>
+          <motion.div
+            {...fade(0.7)}
+            className="flex items-end justify-between gap-6 md:col-span-6 md:col-start-7 lg:col-span-5 lg:col-start-8"
+          >
+            <dl className="space-y-3 font-mono text-xs">
+              <div>
+                <dt className="meta-label">Base</dt>
+                <dd className="mt-1">
+                  {profile.city}, {profile.state} — {profile.country}
+                </dd>
+              </div>
+              <div>
+                <dt className="meta-label">Status</dt>
+                <dd className="mt-1">Oportunidades profissionais e freelance</dd>
+              </div>
+              <div className="flex gap-4 pt-1">
+                <a
+                  href={profile.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 transition-colors hover:text-cyan"
+                >
+                  <Github />
+                  GitHub
+                  <span className="sr-only"> (abre em nova aba)</span>
+                </a>
+                <a
+                  href={profile.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 transition-colors hover:text-cyan"
+                >
+                  <Linkedin />
+                  LinkedIn
+                  <span className="sr-only"> (abre em nova aba)</span>
+                </a>
+              </div>
+            </dl>
+            <a
+              href="#sobre"
+              aria-label="Rolar para a seção Sobre"
+              className="grid size-14 shrink-0 place-items-center rounded-full border border-white/10 transition-colors hover:border-cyan"
+            >
+              <ArrowDown aria-hidden="true" size={18} />
+            </a>
+          </motion.div>
+        </div>
       </div>
     </section>
   )
