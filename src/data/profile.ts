@@ -1,6 +1,6 @@
 import type { NavItem } from './types'
 
-export const SITE_URL = 'https://jasielrasec18-dev-portfolio-jasiel-mu.vercel.app'
+export const SITE_URL = 'https://portfolio-jasiel-rasec-2.vercel.app'
 
 export const profile = {
   name: 'Jasiel Rasec',

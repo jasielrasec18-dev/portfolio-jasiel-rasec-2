@@ -6,7 +6,7 @@
 
 Portfólio com direção de arte editorial e cinematográfica, construído para demonstrar — no próprio site — domínio de interface, arquitetura de front-end, acessibilidade e performance.
 
-[**Ver online**](__SITE_URL__) · [LinkedIn](https://www.linkedin.com/in/jasielrasec-dev/) · [GitHub](https://github.com/jasielrasec18-dev)
+[**Ver online**](https://portfolio-jasiel-rasec-2.vercel.app) · [LinkedIn](https://www.linkedin.com/in/jasielrasec-dev/) · [GitHub](https://github.com/jasielrasec18-dev)
 
 ![Vite](https://img.shields.io/badge/Vite_8-646CFF?logo=vite&logoColor=white)
 ![React](https://img.shields.io/badge/React_19-20232A?logo=react&logoColor=61DAFB)
