@@ -11,6 +11,7 @@
   --color-paper: #f2f3f5;
   --color-cyan: #69d9e8;
   --color-violet: #9276f5;
+  --color-danger: #f0708a;
 
   --font-display: 'Bricolage Grotesque Variable', 'Arial Narrow', system-ui, sans-serif;
   --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
@@ -239,7 +240,7 @@
   @apply w-full border-0 border-b border-line bg-transparent px-0 py-3 text-paper placeholder:text-steel/70 focus:border-cyan focus:outline-none transition-colors duration-300;
 }
 .field[aria-invalid='true'] {
-  border-color: #f0708a;
+  border-color: var(--color-danger);
 }
 
 /* Grade técnica de fundo — colunas de 12 em desktop, 4 em mobile */
@@ -278,13 +279,6 @@
 }
 .blink-dot {
   animation: blink 1.1s steps(1) infinite;
-}
-.meta-label {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-steel);
 }
 
 /* Cursor de terminal */

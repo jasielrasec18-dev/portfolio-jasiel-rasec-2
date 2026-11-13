@@ -38,7 +38,7 @@ function Field({
         {label}
       </label>
       {children}
-      <span id={`${id}-error`} className="min-h-5 font-mono text-xs text-[#f0708a]" aria-live="polite">
+      <span id={`${id}-error`} className="min-h-5 font-mono text-xs text-danger" aria-live="polite">
         {error}
       </span>
     </div>
@@ -216,7 +216,7 @@ export function Contact() {
                   </p>
                 )}
                 {status === 'error' && (
-                  <p className="flex items-start gap-2 text-sm text-[#f0708a]">
+                  <p className="flex items-start gap-2 text-sm text-danger">
                     <CircleAlert size={16} className="mt-0.5 shrink-0" aria-hidden="true" />
                     <span>
                       Não foi possível enviar: {errorMsg} Use o e-mail ou o WhatsApp.

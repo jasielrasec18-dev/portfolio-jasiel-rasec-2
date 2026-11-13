@@ -73,11 +73,11 @@ export function Hero({ ready }: HeroProps) {
         className="hero-glow pointer-events-none absolute top-10 -right-40 h-[640px] w-[640px]"
       />
 
-      <div className="relative mx-auto flex w-full max-w-[1600px] flex-1 flex-col justify-between px-5 pt-10 pb-8 md:px-10">
+      <div className="shell relative flex flex-1 flex-col justify-between pt-10 pb-8">
         {/* Linha superior: coordenadas · edição · disponibilidade */}
         <motion.div
           {...fade(0.4)}
-          className="meta-label flex flex-wrap items-start justify-between gap-4"
+          className="label flex flex-wrap items-start justify-between gap-4"
         >
           <span>[ 08°56′S · 40°30′W ]</span>
           <span className="hidden md:inline">Portfolio — Ed. 2026</span>
@@ -89,7 +89,7 @@ export function Hero({ ready }: HeroProps) {
 
         {/* Nome oversized */}
         <div className="my-10">
-          <motion.p {...fade(0.3)} className="meta-label mb-6 text-cyan">
+          <motion.p {...fade(0.3)} className="label mb-6 text-cyan">
             {'// Full Stack Developer'}
           </motion.p>
           <h1
@@ -142,13 +142,13 @@ export function Hero({ ready }: HeroProps) {
           >
             <dl className="space-y-3 font-mono text-xs">
               <div>
-                <dt className="meta-label">Base</dt>
+                <dt className="label">Base</dt>
                 <dd className="mt-1">
                   {profile.city}, {profile.state} — {profile.country}
                 </dd>
               </div>
               <div>
-                <dt className="meta-label">Status</dt>
+                <dt className="label">Status</dt>
                 <dd className="mt-1">Oportunidades profissionais e freelance</dd>
               </div>
               <div className="flex gap-4 pt-1">
