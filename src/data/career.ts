@@ -34,8 +34,7 @@ export const experience: ExperienceItem[] = [
 export const education = {
   course: 'Desenvolvimento Web Full Stack',
   school: 'DevQuest — Dev em Dobro',
-  period: '2026 – 2027',
-  status: 'em andamento',
+  period: '2026',
 }
 
 export const certifications = [

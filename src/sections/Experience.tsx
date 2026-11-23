@@ -72,9 +72,7 @@ export function Experience() {
                 <span className="label">Formação</span>
                 <p className="mt-3 text-lg leading-snug text-paper">{education.course}</p>
                 <p className="mt-1 text-sm text-mist">{education.school}</p>
-                <p className="meta mt-2 tabular-nums">
-                  {education.period} · {education.status}
-                </p>
+                <p className="meta mt-2 tabular-nums">{education.period}</p>
               </Fade>
               <Fade delay={0.1}>
                 <span className="label">Certificações</span>
