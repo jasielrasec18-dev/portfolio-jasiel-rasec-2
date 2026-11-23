@@ -2,7 +2,6 @@ import { motion, useReducedMotion } from 'motion/react'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
-/** Nós do diagrama abstrato: uma requisição atravessando as camadas de uma aplicação. */
 const nodes = [
   { x: 40, y: 200, label: 'client' },
   { x: 200, y: 90, label: 'ui' },
@@ -21,10 +20,6 @@ const edges: Array<[number, number]> = [
   [4, 5],
 ]
 
-/**
- * Grafo abstrato desenhado progressivamente — referência visual à
- * arquitetura de uma aplicação full stack. Só transform/opacity/pathLength.
- */
 export function ArchGraphic({ className = '' }: { className?: string }) {
   const reduce = useReducedMotion()
 

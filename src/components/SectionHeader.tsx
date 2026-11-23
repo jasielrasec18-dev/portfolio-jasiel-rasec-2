@@ -8,10 +8,6 @@ interface SectionHeaderProps {
   children?: React.ReactNode
 }
 
-/**
- * Cabeçalho editorial: coluna lateral com a numeração da narrativa
- * e o "caminho" da seção; título oversized à direita.
- */
 export function SectionHeader({ number, path, title, id, children }: SectionHeaderProps) {
   return (
     <header className="grid gap-6 lg:grid-cols-12 lg:gap-x-6">

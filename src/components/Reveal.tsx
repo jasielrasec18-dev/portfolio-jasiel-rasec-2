@@ -11,10 +11,6 @@ interface RevealLinesProps {
   delay?: number
 }
 
-/**
- * Revelação tipográfica por linha (máscara + translateY).
- * Usa apenas transform/opacity e respeita prefers-reduced-motion.
- */
 export function RevealLines({
   lines,
   as = 'h2',
@@ -58,7 +54,6 @@ interface FadeProps {
   delay?: number
 }
 
-/** Entrada discreta para blocos de conteúdo secundário. */
 export function Fade({ children, className = '', delay = 0 }: FadeProps) {
   const reduce = useReducedMotion()
   return (

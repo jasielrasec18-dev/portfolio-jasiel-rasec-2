@@ -6,17 +6,11 @@ interface ProjectImageProps {
   name: string
   n?: 1 | 2
   caption?: string
-  /** Prioridade de carregamento (apenas para a primeira dobra de projetos). */
   eager?: boolean
   architecture: ArchitectureLayer[]
   className?: string
 }
 
-/**
- * Figura do projeto. Mostra a captura real quando existe em
- * `src/data/screenshots.json`; caso contrário, uma lâmina neutra com a
- * arquitetura documentada — nunca uma tela simulada.
- */
 export function ProjectImage({
   slug,
   name,

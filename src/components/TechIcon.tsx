@@ -7,10 +7,6 @@ interface TechIconProps {
   className?: string
 }
 
-/**
- * Ícone oficial quando disponível; caso contrário, um monograma neutro
- * (sem imitar a marca) com as iniciais da tecnologia.
- */
 export function TechIcon({ icon, name, size = 18, className = '' }: TechIconProps) {
   const brand = icon ? brandIcons[icon] : undefined
 

@@ -13,7 +13,6 @@ export interface NavItem {
   label: string
 }
 
-/** Diferencia trabalho comercial de projeto autoral (diretriz de integridade nº 6). */
 export type ProjectKind = 'cliente' | 'autoral'
 
 export type ProjectLayout = 'feature' | 'feature-reverse' | 'commission' | 'compact'
@@ -24,7 +23,6 @@ export interface ProjectLink {
   kind: 'demo' | 'code' | 'docs'
 }
 
-/** Camada do diagrama de arquitetura, derivada apenas da stack documentada. */
 export interface ArchitectureLayer {
   role: string
   tech: string[]
@@ -42,7 +40,6 @@ export interface Project {
   tech: string[]
   architecture: ArchitectureLayer[]
   links: ProjectLink[]
-  /** Observação honesta sobre o ambiente de demonstração, quando necessária. */
   note?: string
 }
 
@@ -58,7 +55,6 @@ export interface ExperienceItem {
 
 export interface TechItem {
   name: string
-  /** Chave do ícone oficial em simple-icons; ausente quando não existe ícone oficial disponível. */
   icon?: string
 }
 

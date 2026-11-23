@@ -8,18 +8,12 @@ import { useScrollState } from '../hooks/useScrollState'
 const sectionIds = navItems.map((n) => n.id)
 const EASE = [0.16, 1, 0.3, 1] as const
 
-/**
- * Cabeçalho fixo com comportamento inteligente: transparente no topo,
- * ganha backdrop blur ao rolar, recolhe ao descer e reaparece ao subir.
- * Em mobile abre um menu em tela cheia que fecha ao escolher uma seção.
- */
 export function Header() {
   const [open, setOpen] = useState(false)
   const active = useActiveSection(sectionIds)
   const { scrolled, hidden } = useScrollState()
   const reduce = useReducedMotion()
 
-  // Bloqueia o scroll do body e fecha com Escape enquanto o menu está aberto
   useEffect(() => {
     if (!open) return
     const prev = document.body.style.overflow

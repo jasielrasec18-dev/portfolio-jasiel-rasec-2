@@ -5,7 +5,6 @@ import { stack } from '../data/career'
 
 const allItems = stack.flatMap((g) => g.items)
 
-/** Letreiro contínuo com os ícones oficiais; duplicado para o loop ser contínuo. */
 function Ticker() {
   const row = [...allItems, ...allItems]
   return (

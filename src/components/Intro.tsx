@@ -3,11 +3,6 @@ import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
-/**
- * Abertura discreta (≈1,2s): contador mono e o nome revelado por máscara,
- * depois a cortina sobe. Com prefers-reduced-motion a abertura é pulada.
- * O conteúdo da página já está renderizado por baixo — nada depende dela.
- */
 export function Intro({ onDone }: { onDone: () => void }) {
   const reduce = useReducedMotion()
   const [count, setCount] = useState(0)

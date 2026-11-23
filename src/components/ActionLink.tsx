@@ -22,10 +22,6 @@ const variants = {
   text: 'text-paper text-sm underline decoration-line underline-offset-[6px] hover:decoration-cyan',
 }
 
-/**
- * Link de ação. O ícone desliza na direção da ação para sinalizar
- * o destino (externo, âncora abaixo).
- */
 export function ActionLink({
   href,
   children,

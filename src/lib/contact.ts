@@ -1,12 +1,3 @@
-/**
- * Envio do formulário de contato.
- *
- * O endpoint vem de `VITE_CONTACT_ENDPOINT` (ex.: https://formspree.io/f/xxxxxxx).
- * Qualquer serviço que aceite POST JSON com `Accept: application/json`
- * (Formspree, Web3Forms, Basin, uma função própria) funciona.
- * Sem o endpoint configurado o formulário NÃO simula envio: ele informa
- * que depende de configuração e aponta para e-mail/WhatsApp.
- */
 export const CONTACT_ENDPOINT: string | undefined = import.meta.env.VITE_CONTACT_ENDPOINT
 
 export interface ContactPayload {

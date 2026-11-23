@@ -31,7 +31,6 @@ export interface BrandIcon {
   hex: string
 }
 
-/** Ícones oficiais (simple-icons, CC0). Importação nomeada mantém o tree-shaking. */
 export const brandIcons: Record<string, BrandIcon> = {
   siJavascript,
   siTypescript,

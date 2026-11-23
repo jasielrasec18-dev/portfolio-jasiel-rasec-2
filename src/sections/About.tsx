@@ -11,7 +11,6 @@ const paragraphs = [
 
 const current = experience.find((e) => e.current)
 
-/** Ficha técnica em formato de pares chave/valor, como um arquivo de configuração. */
 const facts: Array<[string, string]> = [
   ['local', `${profile.city} — ${profile.stateShort}, ${profile.country}`],
   ['desde', current ? `${current.role} ${current.org.toLowerCase()} · ${current.start}` : '—'],

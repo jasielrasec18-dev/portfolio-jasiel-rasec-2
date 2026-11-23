@@ -12,7 +12,6 @@ const kindLabel: Record<Project['kind'], string> = {
   autoral: 'Projeto autoral',
 }
 
-/** "Nome | Subtítulo" vira nome + subtítulo em corpo menor. */
 function Title({ name }: { name: string }) {
   const [main, sub] = name.split(' | ')
   if (!sub) return <>{name}</>
@@ -81,7 +80,6 @@ function Links({ links }: { links: ProjectLink[] }) {
   )
 }
 
-/** Estudo de caso principal: imagem grande + segunda captura sobreposta. */
 function FeatureCase({ project, reverse }: { project: Project; reverse?: boolean }) {
   const hasSecond = Boolean(getShot(project.slug, 2))
   return (
@@ -144,7 +142,6 @@ function FeatureCase({ project, reverse }: { project: Project; reverse?: boolean
   )
 }
 
-/** Trabalho comercial: faixa de largura total com a captura à direita. */
 function CommissionCase({ project }: { project: Project }) {
   return (
     <article
@@ -192,7 +189,6 @@ function CommissionCase({ project }: { project: Project }) {
   )
 }
 
-/** Demonstrações complementares: duas colunas. */
 function CompactCase({ project }: { project: Project }) {
   return (
     <article

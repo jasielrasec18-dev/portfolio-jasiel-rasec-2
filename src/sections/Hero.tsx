@@ -6,7 +6,6 @@ import { profile } from '../data/profile'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
-/** Ícones de marca (removidos do lucide-react), traçado no mesmo estilo. */
 function BrandIcon({ children }: { children: ReactNode }) {
   return (
     <svg
@@ -41,7 +40,6 @@ const Linkedin = () => (
 )
 
 interface HeroProps {
-  /** Dispara as animações apenas depois da abertura, para não competirem. */
   ready: boolean
 }
 

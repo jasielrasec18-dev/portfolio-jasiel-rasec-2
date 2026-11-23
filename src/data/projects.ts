@@ -2,10 +2,6 @@ import type { Project } from './types'
 
 const GH = 'https://github.com/jasielrasec18-dev'
 
-/**
- * Conteúdo extraído do briefing e verificado nos links públicos.
- * Repositórios confirmados na conta GitHub jasielrasec18-dev.
- */
 export const projects: Project[] = [
   {
     slug: 'fintrack-ai',

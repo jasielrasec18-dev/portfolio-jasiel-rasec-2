@@ -43,7 +43,6 @@ export const certifications = [
   { name: 'Automações com n8n', issuer: 'DevQuest', year: '2026' },
 ]
 
-/** Competências comportamentais, conforme o currículo. */
 export const softSkills = [
   'Aprendizado rápido',
   'Resolução de problemas',

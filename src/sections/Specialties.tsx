@@ -2,10 +2,9 @@ import { Fade } from '../components/Reveal'
 import { SectionHeader } from '../components/SectionHeader'
 import { specialties, type SpecialtyKey } from '../data/career'
 
-/** Glifos próprios: um desenho de linha por especialidade, sem ícone genérico. */
+
 const glyphs: Record<SpecialtyKey, React.ReactNode> = {
   frontend: (
-    // Grade de layout com um bloco em destaque
     <>
       <rect x="4" y="4" width="56" height="40" rx="1" />
       <line x1="4" y1="14" x2="60" y2="14" />
@@ -14,7 +13,6 @@ const glyphs: Record<SpecialtyKey, React.ReactNode> = {
     </>
   ),
   backend: (
-    // Endpoints ligados a um serviço
     <>
       <rect x="24" y="16" width="16" height="16" rx="1" className="accent" />
       <line x1="4" y1="10" x2="24" y2="20" />
@@ -28,7 +26,6 @@ const glyphs: Record<SpecialtyKey, React.ReactNode> = {
     </>
   ),
   fullstack: (
-    // Camadas empilhadas, conectadas
     <>
       <path d="M32 6 L58 16 L32 26 L6 16 Z" />
       <path d="M6 26 L32 36 L58 26" />
@@ -36,7 +33,6 @@ const glyphs: Record<SpecialtyKey, React.ReactNode> = {
     </>
   ),
   ai: (
-    // Fluxo de automação com um nó de decisão
     <>
       <line x1="4" y1="24" x2="20" y2="24" />
       <path d="M20 24 L32 12 L44 24 L32 36 Z" className="accent" />

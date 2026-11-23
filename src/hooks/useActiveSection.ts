@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { SectionId } from '../data/types'
 
-/** Observa as seções e devolve o id da que ocupa o centro da viewport. */
 export function useActiveSection(ids: SectionId[]): SectionId {
   const [active, setActive] = useState<SectionId>(ids[0])
 
